@@ -1,0 +1,19 @@
+&NEKO_CASE
+mesh_file= '../box_64.nmsh'
+fluid_scheme='pnpn'
+lx = 8
+source_term = 'noforce'
+initial_condition = 'user'
+/
+&NEKO_PARAMETERS
+dt = 5d-4
+T_end = 0.5
+nsamples = 0
+uinf= 0.0,0.0,0.0
+output_bdry = .false.
+Re = 1600
+pc_vel = 'jacobi'
+pc_prs = 'hsmg'
+proj_prs_dim = 0
+!loadb=.true.
+/
